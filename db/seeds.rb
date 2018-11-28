@@ -15,7 +15,7 @@ csv_text = File.read(Rails.root.join('lib', 'seeds', 'employees.csv'))
 csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
 csv.each do |row|
   t = Employee.create
-  t.name = row['name']
+  t.name = row[0]
   t.email = row['email']
   t.dept = row['dept']
   t.active = row['active']
