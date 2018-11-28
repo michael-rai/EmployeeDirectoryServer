@@ -14,11 +14,11 @@ class UsersController < ProtectedController
   end
 
   # GET '/users'
-  def index
-    @users = user.all
-
-    render json: @users
-  end
+  # def index
+  #   @users = user.all
+  #
+  #   render json: @users
+  # end
 
   # POST '/sign-in'
   def signin

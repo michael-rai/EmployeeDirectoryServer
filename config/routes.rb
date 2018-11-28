@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :companies
   # RESTful routes
   resources :examples, except: %i[new edit]
+  resources :users, expect: %i[new edit]
 
   # Custom routes
   post '/sign-up' => 'users#signup'

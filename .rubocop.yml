@@ -13,7 +13,7 @@ Style/FrozenStringLiteralComment:
 
 AllCops:
   TargetRubyVersion:
-    2.3
+    2.4.0.2
   Exclude:
     - 'bin/*'
     - 'config/database.yml'
