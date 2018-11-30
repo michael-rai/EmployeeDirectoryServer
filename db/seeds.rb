@@ -10,6 +10,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
+ # company_id = Company.create.id
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'employees.csv'))
 csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
@@ -22,5 +23,4 @@ csv.each do |row|
   t.save
   puts "#{t.name}, #{t.email}, #{t.dept}, #{t.active} saved "
 end
-
-puts "#{Employee.count}"
+puts "Created #{Employee.count} Employees"
